@@ -54,16 +54,15 @@ body {
   font-size: 10.5px;
   text-decoration: none;
   letter-spacing: 0.01em;
-  color: #fff;
-  mix-blend-mode: difference;
-  opacity: 0.75;
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
   transition: opacity 0.3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   white-space: nowrap;
 }
-.img-link:hover { opacity: 1; }
+.img-link:hover { color: rgba(255, 255, 255, 0.8); }
 
 /* Very slow — barely perceptible drift */
 .link-email      { top: 12%; left: 42%; animation-name: drift-a; animation-duration: 115s;  }

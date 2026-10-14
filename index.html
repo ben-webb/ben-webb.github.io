@@ -13,10 +13,7 @@ body {
   font-size: 10.5px;
   line-height: 1.9;
 }
-.page {
-  display: flex;
-  min-height: 100vh;
-}
+.page { display: flex; min-height: 100vh; }
 .text-pane {
   flex: 0 0 50%;
   display: flex;
@@ -24,15 +21,12 @@ body {
   padding: 6rem 5rem 3.5rem 4rem;
 }
 .statement { width: 100%; }
-.split {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
+.split { display: flex; width: 100%; }
+.split .left  { flex: 0 0 auto; }
 .split .right {
-  flex-shrink: 0;
-  padding-left: 2em;
-  margin-right: 8%;
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-right: 22%;
 }
 .line     { display: block; }
 .gap      { display: block; height: 1em; }
@@ -60,23 +54,22 @@ body {
   font-size: 10.5px;
   text-decoration: none;
   letter-spacing: 0.01em;
-  color: #000;
+  color: #fff;
   mix-blend-mode: difference;
-  opacity: 0.55;
+  opacity: 0.75;
   transition: opacity 0.3s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   white-space: nowrap;
 }
-.img-link:hover { opacity: 0.85; }
+.img-link:hover { opacity: 1; }
 
-/* Subtly distinct speeds — close enough to feel related, far enough to never sync */
-.link-email      { top: 12%; left: 42%; animation-name: drift-a; animation-duration: 22s; }
-.link-soundcloud { top: 55%; left: 20%; animation-name: drift-b; animation-duration: 33s; }
-.link-hecate     { top: 74%; left: 56%; animation-name: drift-c; animation-duration: 48s; }
+/* Very slow — barely perceptible drift */
+.link-email      { top: 12%; left: 42%; animation-name: drift-a; animation-duration: 65s;  }
+.link-soundcloud { top: 55%; left: 20%; animation-name: drift-b; animation-duration: 95s;  }
+.link-hecate     { top: 74%; left: 56%; animation-name: drift-c; animation-duration: 145s; }
 
-/* Wide paths covering the full image space */
 @keyframes drift-a {
   0%   { transform: translate(  0vw,   0vh ); }
   20%  { transform: translate(  7vw,  20vh ); }
